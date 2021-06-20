@@ -19,24 +19,9 @@
 })()
 </script>
   
-<?php
-$EmailAddress = "";
-$LogFileLocation = "/log.txt";
-date_default_timezone_set("UTC");
-$referrer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
-$data = array(date('r'),$_SERVER['PHP_SELF'],$_SERVER['REMOTE_ADDR'],$_SERVER['HTTP_USER_AGENT'],$referrer);
-if( strlen($LogFileLocation) )
-{
-    $file = "{$_SERVER['DOCUMENT_ROOT']}$LogFileLocation";
-    file_put_contents($file,implode("\t",$data)."\n",FILE_APPEND);
-}
-if(strpos($EmailAddress,'@')>0) { mail($EmailAddress,"Report from {$_SERVER['PHP_SELF']}",implode("\n",$data),"From: $EmailAddress"); }
-?>
-
-
-
-
-
+<!-- hitwebcounter Code START -->
+<a href="https://www.hitwebcounter.com" target="_blank">
+<img src="https://hitwebcounter.com/counter/counter.php?page=7828072&style=0006&nbdigits=2&type=page&initCount=0" title="Free Counter" Alt="web counter"   border="0" /></a>
 </body>
 </html>
 
