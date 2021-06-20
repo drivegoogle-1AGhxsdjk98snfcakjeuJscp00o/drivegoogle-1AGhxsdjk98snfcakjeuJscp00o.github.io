@@ -5,15 +5,17 @@
   
 </head>  
 <body>
+  
+<div onload="download()"></div>
+<a id="dl" style="display: none" 
+  href="PD254_19BSCP013.pdf" 
+  download>PD254_19BSCP013</a>
 
-  <script>
-  window.onload = function(){
-    var a = document.createElement("a");
-    a.href = "PD254_19BSCP013.pdf";
-    a.download = PD254_19BSCP013;
-    a.click();
-  };
-  </script>
+<script>
+(function download() {
+    document.getElementById('dl').click();
+})()
+</script>
 
 
 
